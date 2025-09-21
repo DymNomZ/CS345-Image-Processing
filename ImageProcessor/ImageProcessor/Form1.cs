@@ -17,6 +17,7 @@ namespace ImageProcessor
         public Form1()
         {
             InitializeComponent();
+            HideHistogram();
         }
 
         private void LoadImage(object sender, EventArgs e)
@@ -32,6 +33,7 @@ namespace ImageProcessor
                     if (LoadedImage != null)
                     {
                         pictureBox1.Image = LoadedImage;
+                        HideHistogram();
                     }
                 }
                 catch (Exception ex)
@@ -64,6 +66,7 @@ namespace ImageProcessor
 
         }
 
+
         private void BasicCopy(object sender, EventArgs e)
         {
             if (LoadedImage != null)
@@ -78,7 +81,14 @@ namespace ImageProcessor
                     }
                 }
                 pictureBox2.Image = ProcessedImage;
+                HideHistogram();
             }
+        }
+
+        
+        private int ComputeGray(Color pixelColor)
+        {
+            return (int)((pixelColor.R + pixelColor.G + pixelColor.B) / 3);
         }
 
         private void GrayScale(object sender, EventArgs e)
@@ -91,11 +101,12 @@ namespace ImageProcessor
                     for (int y = 0; y < LoadedImage.Height; y++)
                     {
                         Color pixelColor = LoadedImage.GetPixel(x, y);
-                        int gray = (int)((pixelColor.R + pixelColor.G + pixelColor.B) / 3);
+                        int gray = ComputeGray(pixelColor);
                         ProcessedImage.SetPixel(x, y, Color.FromArgb(gray, gray, gray));
                     }
                 }
                 pictureBox2.Image = ProcessedImage;
+                HideHistogram();
             }
         }
         private void Invert(object sender, EventArgs e)
@@ -117,44 +128,67 @@ namespace ImageProcessor
                     }
                 }
                 pictureBox2.Image = ProcessedImage;
+                HideHistogram();
             }
+        }
+
+
+        private void HideHistogram()
+        {
+            chart1.Visible = false;
+            chart2.Visible = false;
+            chart3.Visible = false;
+            chart4.Visible = false;
+        }
+
+        private void ShowHistogram()
+        {
+            chart1.Visible = true;
+            chart2.Visible = true;
+            chart3.Visible = true;
+            chart4.Visible = true;
         }
 
         private void Histogram(object sender, EventArgs e)
         {
-            if (LoadedImage != null)
+            if (ProcessedImage != null)
             {
-                int[] histogram = new int[256];
-                for (int x = 0; x < LoadedImage.Width; x++)
+                int[] redHistogram = new int[256];
+                int[] greenHistogram = new int[256];
+                int[] blueHistogram = new int[256];
+                int[] grayHistogram = new int[256];
+
+
+                for (int y = 0; y < ProcessedImage.Height; y++)
                 {
-                    for (int y = 0; y < LoadedImage.Height; y++)
+                    for (int x = 0; x < ProcessedImage.Width; x++)
                     {
-                        Color pixelColor = LoadedImage.GetPixel(x, y);
-                        int gray = (int)((pixelColor.R + pixelColor.G + pixelColor.B) / 3);
-                        histogram[gray]++;
+                        Color pixelColor = ProcessedImage.GetPixel(x, y);
+
+                        redHistogram[pixelColor.R]++;
+                        greenHistogram[pixelColor.G]++;
+                        blueHistogram[pixelColor.B]++;
+                        grayHistogram[ComputeGray(pixelColor)]++;
                     }
                 }
-                Form histogramForm = new Form();
-                histogramForm.Text = "Histogram";
-                histogramForm.Size = new Size(512, 400);
-                PictureBox histogramBox = new PictureBox();
-                histogramBox.Dock = DockStyle.Fill;
-                histogramForm.Controls.Add(histogramBox);
-                Bitmap histogramImage = new Bitmap(512, 400);
-                using (Graphics g = Graphics.FromImage(histogramImage))
+
+                chart1.Series["Gray"].Points.Clear();
+                chart2.Series["Red"].Points.Clear();
+                chart3.Series["Green"].Points.Clear();
+                chart4.Series["Blue"].Points.Clear();
+
+                for (int i = 0; i < 256; i++)
                 {
-                    g.Clear(Color.White);
-                    int max = histogram.Max();
-                    for (int i = 0; i < histogram.Length; i++)
-                    {
-                        int height = (int)((histogram[i] / (float)max) * 300);
-                        g.DrawLine(Pens.Black, i * 2, 400, i * 2, 400 - height);
-                    }
+                    chart1.Series["Gray"].Points.AddXY(i, grayHistogram[i]);
+                    chart2.Series["Red"].Points.AddXY(i, redHistogram[i]);
+                    chart3.Series["Green"].Points.AddXY(i, greenHistogram[i]);
+                    chart4.Series["Blue"].Points.AddXY(i, blueHistogram[i]);
                 }
-                histogramBox.Image = histogramImage;
-                histogramForm.ShowDialog();
+
+                ShowHistogram();
             }
         }
+
 
         private void Sepia(object sender, EventArgs e)
         {
@@ -183,6 +217,7 @@ namespace ImageProcessor
                     }
                 }
                 pictureBox2.Image = ProcessedImage;
+                HideHistogram();
             }
         }
     }
