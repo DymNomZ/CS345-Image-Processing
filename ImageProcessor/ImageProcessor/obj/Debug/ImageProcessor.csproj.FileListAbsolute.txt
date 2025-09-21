@@ -1,0 +1,11 @@
+C:\Users\dymno\Desktop\CS345-Image-Processing\ImageProcessor\ImageProcessor\bin\Debug\ImageProcessor.exe.config
+C:\Users\dymno\Desktop\CS345-Image-Processing\ImageProcessor\ImageProcessor\bin\Debug\ImageProcessor.exe
+C:\Users\dymno\Desktop\CS345-Image-Processing\ImageProcessor\ImageProcessor\bin\Debug\ImageProcessor.pdb
+C:\Users\dymno\Desktop\CS345-Image-Processing\ImageProcessor\ImageProcessor\obj\Debug\ImageProcessor.csproj.AssemblyReference.cache
+C:\Users\dymno\Desktop\CS345-Image-Processing\ImageProcessor\ImageProcessor\obj\Debug\ImageProcessor.Form1.resources
+C:\Users\dymno\Desktop\CS345-Image-Processing\ImageProcessor\ImageProcessor\obj\Debug\ImageProcessor.Properties.Resources.resources
+C:\Users\dymno\Desktop\CS345-Image-Processing\ImageProcessor\ImageProcessor\obj\Debug\ImageProcessor.csproj.GenerateResource.cache
+C:\Users\dymno\Desktop\CS345-Image-Processing\ImageProcessor\ImageProcessor\obj\Debug\ImageProcessor.csproj.CoreCompileInputs.cache
+C:\Users\dymno\Desktop\CS345-Image-Processing\ImageProcessor\ImageProcessor\obj\Debug\ImageProcessor.exe
+C:\Users\dymno\Desktop\CS345-Image-Processing\ImageProcessor\ImageProcessor\obj\Debug\ImageProcessor.pdb
+C:\Users\dymno\Desktop\CS345-Image-Processing\ImageProcessor\ImageProcessor\obj\Debug\ImageProcessor.exe.config
