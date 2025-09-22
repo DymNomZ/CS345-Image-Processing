@@ -15,9 +15,6 @@ namespace ImageProcessor
     {
         Bitmap imageB, imageA, resultImage;
 
-        OpenFileDialog ofdB = new OpenFileDialog();
-        OpenFileDialog ofdA = new OpenFileDialog();
-
         public UserControl2()
         {
             InitializeComponent();
@@ -46,42 +43,34 @@ namespace ImageProcessor
 
         private void LoadImageB(object sender, EventArgs e)
         {
-            if (ofdB.ShowDialog() == DialogResult.OK)
+            openFileDialog1.ShowDialog();
+        }
+
+        private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
+        {
+
+            imageB = (Bitmap)Image.FromFile(openFileDialog1.FileName);
+
+            if (imageB != null)
             {
-                try
-                {
-                    imageB = (Bitmap)Image.FromFile(ofdB.FileName);
-
-                    if (imageB != null)
-                    {
-                        pictureBox1.Image = imageB;
-                    }
-                }
-                catch (Exception ex)
-                {
-
-                }
+                pictureBox1.Image = imageB;
             }
         }
 
 
         private void LoadImageA(object sender, EventArgs e)
         {
-            if (ofdA.ShowDialog() == DialogResult.OK)
+            openFileDialog2.ShowDialog();
+        }
+
+
+        private void openFileDialog2_FileOk(object sender, CancelEventArgs e)
+        {
+            imageA = (Bitmap)Image.FromFile(openFileDialog2.FileName);
+
+            if (imageA != null)
             {
-                try
-                {
-                    imageA = (Bitmap)Image.FromFile(ofdA.FileName);
-
-                    if (imageA != null)
-                    {
-                        pictureBox2.Image = imageA;
-                    }
-                }
-                catch (Exception ex)
-                {
-
-                }
+                pictureBox2.Image = imageA;
             }
         }
 
