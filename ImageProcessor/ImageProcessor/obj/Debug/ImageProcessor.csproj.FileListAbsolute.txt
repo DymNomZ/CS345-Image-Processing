@@ -9,3 +9,5 @@ C:\Users\dymno\Desktop\CS345-Image-Processing\ImageProcessor\ImageProcessor\obj\
 C:\Users\dymno\Desktop\CS345-Image-Processing\ImageProcessor\ImageProcessor\obj\Debug\ImageProcessor.exe
 C:\Users\dymno\Desktop\CS345-Image-Processing\ImageProcessor\ImageProcessor\obj\Debug\ImageProcessor.pdb
 C:\Users\dymno\Desktop\CS345-Image-Processing\ImageProcessor\ImageProcessor\obj\Debug\ImageProcessor.exe.config
+C:\Users\dymno\Desktop\CS345-Image-Processing\ImageProcessor\ImageProcessor\obj\Debug\ImageProcessor.UserControl1.resources
+C:\Users\dymno\Desktop\CS345-Image-Processing\ImageProcessor\ImageProcessor\obj\Debug\ImageProcessor.UserControl2.resources

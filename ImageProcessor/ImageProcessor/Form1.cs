@@ -12,34 +12,30 @@ namespace ImageProcessor
 {
     public partial class Form1 : Form
     {
+        UserControl1 userControl1;
+        UserControl2 userControl2;
 
-        Bitmap LoadedImage, ProcessedImage;
+        bool onBasicManip = true;
         public Form1()
         {
             InitializeComponent();
-            HideHistogram();
+            userControl1 = new UserControl1();
+            userControl2 = new UserControl2();
+
+            panel1.Controls.Add(userControl1);
         }
 
         private void LoadImage(object sender, EventArgs e)
         {
-            OpenFileDialog ofd = new OpenFileDialog();
 
-            if (ofd.ShowDialog() == DialogResult.OK)
+            if (!onBasicManip)
             {
-                try
-                {
-                    LoadedImage = (Bitmap)Image.FromFile(ofd.FileName);
+                return;
+            }
 
-                    if (LoadedImage != null)
-                    {
-                        pictureBox1.Image = LoadedImage;
-                        HideHistogram();
-                    }
-                }
-                catch (Exception ex)
-                {
-
-                }
+            if(userControl1 != null)
+            {
+                userControl1.LoadImage(sender, e);
             }
 
         }
@@ -47,20 +43,18 @@ namespace ImageProcessor
         private void SaveImage(object sender, EventArgs e)
         {
 
-            if (ProcessedImage != null)
+            if (onBasicManip)
             {
-                SaveFileDialog sfd = new SaveFileDialog();
-
-                if (sfd.ShowDialog() == DialogResult.OK)
+                if(userControl1 != null)
                 {
-                    try
-                    {
-                        ProcessedImage.Save(sfd.FileName + ".png");
-                    }
-                    catch (Exception ex)
-                    {
-
-                    }
+                    userControl1.SaveImage(sender, e);
+                }
+            }
+            else
+            {
+                if (userControl2 != null)
+                {
+                    userControl2.SaveImage(sender, e);
                 }
             }
 
@@ -69,155 +63,65 @@ namespace ImageProcessor
 
         private void BasicCopy(object sender, EventArgs e)
         {
-            if (LoadedImage != null)
+            if (onBasicManip)
             {
-                ProcessedImage = new Bitmap(LoadedImage.Width, LoadedImage.Height);
-                for (int x = 0; x < LoadedImage.Width; x++)
-                {
-                    for (int y = 0; y < LoadedImage.Height; y++)
-                    {
-                        Color pixelColor = LoadedImage.GetPixel(x, y);
-                        ProcessedImage.SetPixel(x, y, pixelColor);
-                    }
-                }
-                pictureBox2.Image = ProcessedImage;
-                HideHistogram();
+                userControl1.BasicCopy(sender, e);
             }
         }
 
-        
-        private int ComputeGray(Color pixelColor)
-        {
-            return (int)((pixelColor.R + pixelColor.G + pixelColor.B) / 3);
-        }
 
         private void GrayScale(object sender, EventArgs e)
         {
-            if (LoadedImage != null)
+            if (onBasicManip)
             {
-                ProcessedImage = new Bitmap(LoadedImage.Width, LoadedImage.Height);
-                for (int x = 0; x < LoadedImage.Width; x++)
-                {
-                    for (int y = 0; y < LoadedImage.Height; y++)
-                    {
-                        Color pixelColor = LoadedImage.GetPixel(x, y);
-                        int gray = ComputeGray(pixelColor);
-                        ProcessedImage.SetPixel(x, y, Color.FromArgb(gray, gray, gray));
-                    }
-                }
-                pictureBox2.Image = ProcessedImage;
-                HideHistogram();
+                userControl1.GrayScale(sender, e);
             }
         }
         private void Invert(object sender, EventArgs e)
         {
-            if (LoadedImage != null)
+            if (onBasicManip)
             {
-                ProcessedImage = new Bitmap(LoadedImage.Width, LoadedImage.Height);
-                for (int x = 0; x < LoadedImage.Width; x++)
-                {
-                    for (int y = 0; y < LoadedImage.Height; y++)
-                    {
-                        Color pixelColor = LoadedImage.GetPixel(x, y);
-
-                        int red = 255 - pixelColor.R;
-                        int green = 255 - pixelColor.G;
-                        int blue = 255 - pixelColor.B;
-
-                        ProcessedImage.SetPixel(x, y, Color.FromArgb(red, green, blue));
-                    }
-                }
-                pictureBox2.Image = ProcessedImage;
-                HideHistogram();
+                userControl1.Invert(sender, e);
             }
         }
 
 
-        private void HideHistogram()
-        {
-            chart1.Visible = false;
-            chart2.Visible = false;
-            chart3.Visible = false;
-            chart4.Visible = false;
-        }
-
-        private void ShowHistogram()
-        {
-            chart1.Visible = true;
-            chart2.Visible = true;
-            chart3.Visible = true;
-            chart4.Visible = true;
-        }
-
         private void Histogram(object sender, EventArgs e)
         {
-            if (ProcessedImage != null)
+            if (onBasicManip)
             {
-                int[] redHistogram = new int[256];
-                int[] greenHistogram = new int[256];
-                int[] blueHistogram = new int[256];
-                int[] grayHistogram = new int[256];
-
-
-                for (int y = 0; y < ProcessedImage.Height; y++)
-                {
-                    for (int x = 0; x < ProcessedImage.Width; x++)
-                    {
-                        Color pixelColor = ProcessedImage.GetPixel(x, y);
-
-                        redHistogram[pixelColor.R]++;
-                        greenHistogram[pixelColor.G]++;
-                        blueHistogram[pixelColor.B]++;
-                        grayHistogram[ComputeGray(pixelColor)]++;
-                    }
-                }
-
-                chart1.Series["Gray"].Points.Clear();
-                chart2.Series["Red"].Points.Clear();
-                chart3.Series["Green"].Points.Clear();
-                chart4.Series["Blue"].Points.Clear();
-
-                for (int i = 0; i < 256; i++)
-                {
-                    chart1.Series["Gray"].Points.AddXY(i, grayHistogram[i]);
-                    chart2.Series["Red"].Points.AddXY(i, redHistogram[i]);
-                    chart3.Series["Green"].Points.AddXY(i, greenHistogram[i]);
-                    chart4.Series["Blue"].Points.AddXY(i, blueHistogram[i]);
-                }
-
-                ShowHistogram();
+                userControl1.Histogram(sender, e);
             }
         }
 
 
         private void Sepia(object sender, EventArgs e)
         {
-            if (LoadedImage != null)
+            if (onBasicManip)
             {
-                ProcessedImage = new Bitmap(LoadedImage.Width, LoadedImage.Height);
-                for (int x = 0; x < LoadedImage.Width; x++)
-                {
-                    for (int y = 0; y < LoadedImage.Height; y++)
-                    {
-                        Color pixelColor = LoadedImage.GetPixel(x, y);
+                userControl1.Sepia(sender, e);
+            }
+        }
 
-                        int r = pixelColor.R;
-                        int g = pixelColor.G;
-                        int b = pixelColor.B;
 
-                        double newRed = (r * 0.393) + (g * 0.769) + (b * 0.189);
-                        double newGreen = (r * 0.349) + (g * 0.686) + (b * 0.168);
-                        double newBlue = (r * 0.272) + (g * 0.534) + (b * 0.131);
+        private void ChangeToBasicManip(object sender, EventArgs e)
+        {
+            if (!onBasicManip)
+            {
+                panel1.Controls.Clear();
+                panel1.Controls.Add(userControl1);
+                onBasicManip = true;
+            }
+        }
 
-                        int finalRed = (int)Math.Min(255, newRed);
-                        int finalGreen = (int)Math.Min(255, newGreen);
-                        int finalBlue = (int)Math.Min(255, newBlue);
 
-                        ProcessedImage.SetPixel(x, y, Color.FromArgb(finalRed, finalGreen, finalBlue));
-                    }
-                }
-                pictureBox2.Image = ProcessedImage;
-                HideHistogram();
+        private void ChangeToSubtraction(object sender, EventArgs e)
+        {
+            if (onBasicManip)
+            {
+                panel1.Controls.Clear();
+                panel1.Controls.Add(userControl2);
+                onBasicManip = false;
             }
         }
     }
