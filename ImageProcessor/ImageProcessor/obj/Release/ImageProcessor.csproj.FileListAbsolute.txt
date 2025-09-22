@@ -1,0 +1,12 @@
+C:\Users\dymno\Desktop\CS345-Image-Processing\ImageProcessor\ImageProcessor\bin\Release\ImageProcessor.exe.config
+C:\Users\dymno\Desktop\CS345-Image-Processing\ImageProcessor\ImageProcessor\bin\Release\ImageProcessor.exe
+C:\Users\dymno\Desktop\CS345-Image-Processing\ImageProcessor\ImageProcessor\bin\Release\ImageProcessor.pdb
+C:\Users\dymno\Desktop\CS345-Image-Processing\ImageProcessor\ImageProcessor\obj\Release\ImageProcessor.csproj.AssemblyReference.cache
+C:\Users\dymno\Desktop\CS345-Image-Processing\ImageProcessor\ImageProcessor\obj\Release\ImageProcessor.Form1.resources
+C:\Users\dymno\Desktop\CS345-Image-Processing\ImageProcessor\ImageProcessor\obj\Release\ImageProcessor.Properties.Resources.resources
+C:\Users\dymno\Desktop\CS345-Image-Processing\ImageProcessor\ImageProcessor\obj\Release\ImageProcessor.UserControl1.resources
+C:\Users\dymno\Desktop\CS345-Image-Processing\ImageProcessor\ImageProcessor\obj\Release\ImageProcessor.UserControl2.resources
+C:\Users\dymno\Desktop\CS345-Image-Processing\ImageProcessor\ImageProcessor\obj\Release\ImageProcessor.csproj.GenerateResource.cache
+C:\Users\dymno\Desktop\CS345-Image-Processing\ImageProcessor\ImageProcessor\obj\Release\ImageProcessor.csproj.CoreCompileInputs.cache
+C:\Users\dymno\Desktop\CS345-Image-Processing\ImageProcessor\ImageProcessor\obj\Release\ImageProcessor.exe
+C:\Users\dymno\Desktop\CS345-Image-Processing\ImageProcessor\ImageProcessor\obj\Release\ImageProcessor.pdb
