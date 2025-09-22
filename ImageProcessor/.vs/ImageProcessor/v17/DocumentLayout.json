@@ -3,20 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\dymno\\Desktop\\CS345-Image-Processing\\ImageProcessor\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{923B5379-5A2F-4F5C-A5F8-B70E4973A988}|ImageProcessor\\ImageProcessor.csproj|c:\\users\\dymno\\desktop\\cs345-image-processing\\imageprocessor\\imageprocessor\\usercontrol1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{923B5379-5A2F-4F5C-A5F8-B70E4973A988}|ImageProcessor\\ImageProcessor.csproj|solutionrelative:imageprocessor\\usercontrol1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{923B5379-5A2F-4F5C-A5F8-B70E4973A988}|ImageProcessor\\ImageProcessor.csproj|c:\\users\\dymno\\desktop\\cs345-image-processing\\imageprocessor\\imageprocessor\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{923B5379-5A2F-4F5C-A5F8-B70E4973A988}|ImageProcessor\\ImageProcessor.csproj|solutionrelative:imageprocessor\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{923B5379-5A2F-4F5C-A5F8-B70E4973A988}|ImageProcessor\\ImageProcessor.csproj|c:\\users\\dymno\\desktop\\cs345-image-processing\\imageprocessor\\imageprocessor\\usercontrol2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{923B5379-5A2F-4F5C-A5F8-B70E4973A988}|ImageProcessor\\ImageProcessor.csproj|solutionrelative:imageprocessor\\usercontrol2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{923B5379-5A2F-4F5C-A5F8-B70E4973A988}|ImageProcessor\\ImageProcessor.csproj|c:\\users\\dymno\\desktop\\cs345-image-processing\\imageprocessor\\imageprocessor\\usercontrol1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{923B5379-5A2F-4F5C-A5F8-B70E4973A988}|ImageProcessor\\ImageProcessor.csproj|solutionrelative:imageprocessor\\usercontrol1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{923B5379-5A2F-4F5C-A5F8-B70E4973A988}|ImageProcessor\\ImageProcessor.csproj|c:\\users\\dymno\\desktop\\cs345-image-processing\\imageprocessor\\imageprocessor\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -35,65 +23,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "UserControl1.cs",
-              "DocumentMoniker": "C:\\Users\\dymno\\Desktop\\CS345-Image-Processing\\ImageProcessor\\ImageProcessor\\UserControl1.cs",
-              "RelativeDocumentMoniker": "ImageProcessor\\UserControl1.cs",
-              "ToolTip": "C:\\Users\\dymno\\Desktop\\CS345-Image-Processing\\ImageProcessor\\ImageProcessor\\UserControl1.cs",
-              "RelativeToolTip": "ImageProcessor\\UserControl1.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAAwCIAAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-22T04:27:12.996Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "UserControl1.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\dymno\\Desktop\\CS345-Image-Processing\\ImageProcessor\\ImageProcessor\\UserControl1.cs",
-              "RelativeDocumentMoniker": "ImageProcessor\\UserControl1.cs",
-              "ToolTip": "C:\\Users\\dymno\\Desktop\\CS345-Image-Processing\\ImageProcessor\\ImageProcessor\\UserControl1.cs [Design]",
-              "RelativeToolTip": "ImageProcessor\\UserControl1.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-22T04:26:55.351Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\Users\\dymno\\Desktop\\CS345-Image-Processing\\ImageProcessor\\ImageProcessor\\Form1.cs",
               "RelativeDocumentMoniker": "ImageProcessor\\Form1.cs",
               "ToolTip": "C:\\Users\\dymno\\Desktop\\CS345-Image-Processing\\ImageProcessor\\ImageProcessor\\Form1.cs",
               "RelativeToolTip": "ImageProcessor\\Form1.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAYwDEAAAA2AAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAHcAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-22T04:26:08.166Z",
+              "WhenOpened": "2025-09-22T05:20:45.22Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "C:\\Users\\dymno\\Desktop\\CS345-Image-Processing\\ImageProcessor\\ImageProcessor\\Form1.cs",
               "RelativeDocumentMoniker": "ImageProcessor\\Form1.cs",
               "ToolTip": "C:\\Users\\dymno\\Desktop\\CS345-Image-Processing\\ImageProcessor\\ImageProcessor\\Form1.cs [Design]",
               "RelativeToolTip": "ImageProcessor\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-22T04:26:00.932Z",
+              "WhenOpened": "2025-09-22T05:20:38.129Z",
               "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UserControl2.cs",
-              "DocumentMoniker": "C:\\Users\\dymno\\Desktop\\CS345-Image-Processing\\ImageProcessor\\ImageProcessor\\UserControl2.cs",
-              "RelativeDocumentMoniker": "ImageProcessor\\UserControl2.cs",
-              "ToolTip": "C:\\Users\\dymno\\Desktop\\CS345-Image-Processing\\ImageProcessor\\ImageProcessor\\UserControl2.cs",
-              "RelativeToolTip": "ImageProcessor\\UserControl2.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAAwBgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-22T04:22:55.138Z",
-              "EditorCaption": ""
             }
           ]
         }
