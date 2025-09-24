@@ -10,3 +10,4 @@ C:\Users\dymno\Desktop\CS345-Image-Processing\ImageProcessor\ImageProcessor\obj\
 C:\Users\dymno\Desktop\CS345-Image-Processing\ImageProcessor\ImageProcessor\obj\Release\ImageProcessor.csproj.CoreCompileInputs.cache
 C:\Users\dymno\Desktop\CS345-Image-Processing\ImageProcessor\ImageProcessor\obj\Release\ImageProcessor.exe
 C:\Users\dymno\Desktop\CS345-Image-Processing\ImageProcessor\ImageProcessor\obj\Release\ImageProcessor.pdb
+C:\Users\dymno\Desktop\CS345-Image-Processing\ImageProcessor\ImageProcessor\obj\Release\ImageProcessor.exe.config

@@ -53,7 +53,7 @@
             this.subtractionToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1432, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1682, 30);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -63,7 +63,7 @@
             this.testToolStripMenuItem,
             this.saveToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 26);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // testToolStripMenuItem
@@ -89,42 +89,42 @@
             this.histogramToolStripMenuItem,
             this.sepiaToolStripMenuItem});
             this.manipulationsToolStripMenuItem.Name = "manipulationsToolStripMenuItem";
-            this.manipulationsToolStripMenuItem.Size = new System.Drawing.Size(149, 24);
+            this.manipulationsToolStripMenuItem.Size = new System.Drawing.Size(149, 26);
             this.manipulationsToolStripMenuItem.Text = "Basic Manipulation";
             this.manipulationsToolStripMenuItem.Click += new System.EventHandler(this.ChangeToBasicManip);
             // 
             // basicCopyToolStripMenuItem
             // 
             this.basicCopyToolStripMenuItem.Name = "basicCopyToolStripMenuItem";
-            this.basicCopyToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.basicCopyToolStripMenuItem.Size = new System.Drawing.Size(164, 26);
             this.basicCopyToolStripMenuItem.Text = "Basic Copy";
             this.basicCopyToolStripMenuItem.Click += new System.EventHandler(this.BasicCopy);
             // 
             // grayScaleToolStripMenuItem
             // 
             this.grayScaleToolStripMenuItem.Name = "grayScaleToolStripMenuItem";
-            this.grayScaleToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.grayScaleToolStripMenuItem.Size = new System.Drawing.Size(164, 26);
             this.grayScaleToolStripMenuItem.Text = "GrayScale";
             this.grayScaleToolStripMenuItem.Click += new System.EventHandler(this.GrayScale);
             // 
             // invertToolStripMenuItem
             // 
             this.invertToolStripMenuItem.Name = "invertToolStripMenuItem";
-            this.invertToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.invertToolStripMenuItem.Size = new System.Drawing.Size(164, 26);
             this.invertToolStripMenuItem.Text = "Invert";
             this.invertToolStripMenuItem.Click += new System.EventHandler(this.Invert);
             // 
             // histogramToolStripMenuItem
             // 
             this.histogramToolStripMenuItem.Name = "histogramToolStripMenuItem";
-            this.histogramToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.histogramToolStripMenuItem.Size = new System.Drawing.Size(164, 26);
             this.histogramToolStripMenuItem.Text = "Histogram";
             this.histogramToolStripMenuItem.Click += new System.EventHandler(this.Histogram);
             // 
             // sepiaToolStripMenuItem
             // 
             this.sepiaToolStripMenuItem.Name = "sepiaToolStripMenuItem";
-            this.sepiaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.sepiaToolStripMenuItem.Size = new System.Drawing.Size(164, 26);
             this.sepiaToolStripMenuItem.Text = "Sepia";
             this.sepiaToolStripMenuItem.Click += new System.EventHandler(this.Sepia);
             // 
@@ -144,14 +144,14 @@
             // 
             this.panel1.Location = new System.Drawing.Point(12, 31);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1400, 700);
+            this.panel1.Size = new System.Drawing.Size(1650, 700);
             this.panel1.TabIndex = 1;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1432, 753);
+            this.ClientSize = new System.Drawing.Size(1682, 753);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
             this.Name = "Form1";

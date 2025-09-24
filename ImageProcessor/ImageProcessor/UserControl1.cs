@@ -19,6 +19,12 @@ namespace ImageProcessor
             HideHistogram();
         }
 
+        private void DummyFunction(object sender, EventArgs e)
+        {
+            // This function is just a placeholder so that I can go to the .cs file.
+        }
+
+
         public void LoadImage(object sender, EventArgs e)
         {
             OpenFileDialog ofd = new OpenFileDialog();
@@ -43,6 +49,7 @@ namespace ImageProcessor
             }
 
         }
+
 
         public void SaveImage(object sender, EventArgs e)
         {
@@ -109,6 +116,8 @@ namespace ImageProcessor
                 HideHistogram();
             }
         }
+
+
         public void Invert(object sender, EventArgs e)
         {
             if (LoadedImage != null)
@@ -188,6 +197,7 @@ namespace ImageProcessor
                 ShowHistogram();
             }
         }
+
 
         public void Sepia(object sender, EventArgs e)
         {
