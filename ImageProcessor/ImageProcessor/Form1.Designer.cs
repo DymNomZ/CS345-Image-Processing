@@ -39,8 +39,20 @@
             this.histogramToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sepiaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.subtractionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.convolutionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.smoothToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gaussianBlurToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.embossLaplacianToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.meanRemovalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.embossToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.laplascianToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.horizontalVerticalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.allDirectionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lossyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.horizontalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.verticalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,10 +62,11 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.manipulationsToolStripMenuItem,
-            this.subtractionToolStripMenuItem});
+            this.subtractionToolStripMenuItem,
+            this.convolutionToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1682, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(1682, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -63,7 +76,7 @@
             this.testToolStripMenuItem,
             this.saveToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 26);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // testToolStripMenuItem
@@ -89,7 +102,7 @@
             this.histogramToolStripMenuItem,
             this.sepiaToolStripMenuItem});
             this.manipulationsToolStripMenuItem.Name = "manipulationsToolStripMenuItem";
-            this.manipulationsToolStripMenuItem.Size = new System.Drawing.Size(149, 26);
+            this.manipulationsToolStripMenuItem.Size = new System.Drawing.Size(149, 24);
             this.manipulationsToolStripMenuItem.Text = "Basic Manipulation";
             this.manipulationsToolStripMenuItem.Click += new System.EventHandler(this.ChangeToBasicManip);
             // 
@@ -131,9 +144,36 @@
             // subtractionToolStripMenuItem
             // 
             this.subtractionToolStripMenuItem.Name = "subtractionToolStripMenuItem";
-            this.subtractionToolStripMenuItem.Size = new System.Drawing.Size(99, 26);
+            this.subtractionToolStripMenuItem.Size = new System.Drawing.Size(99, 24);
             this.subtractionToolStripMenuItem.Text = "Subtraction";
             this.subtractionToolStripMenuItem.Click += new System.EventHandler(this.ChangeToSubtraction);
+            // 
+            // convolutionToolStripMenuItem
+            // 
+            this.convolutionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.smoothToolStripMenuItem,
+            this.gaussianBlurToolStripMenuItem,
+            this.embossLaplacianToolStripMenuItem,
+            this.meanRemovalToolStripMenuItem,
+            this.embossToolStripMenuItem});
+            this.convolutionToolStripMenuItem.Name = "convolutionToolStripMenuItem";
+            this.convolutionToolStripMenuItem.Size = new System.Drawing.Size(103, 24);
+            this.convolutionToolStripMenuItem.Text = "Convolution";
+            this.convolutionToolStripMenuItem.Click += new System.EventHandler(this.ChangeToConvolution);
+            // 
+            // smoothToolStripMenuItem
+            // 
+            this.smoothToolStripMenuItem.Name = "smoothToolStripMenuItem";
+            this.smoothToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.smoothToolStripMenuItem.Text = "Smooth";
+            this.smoothToolStripMenuItem.Click += new System.EventHandler(this.Smooth);
+            // 
+            // gaussianBlurToolStripMenuItem
+            // 
+            this.gaussianBlurToolStripMenuItem.Name = "gaussianBlurToolStripMenuItem";
+            this.gaussianBlurToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.gaussianBlurToolStripMenuItem.Text = "Gaussian Blur";
+            this.gaussianBlurToolStripMenuItem.Click += new System.EventHandler(this.GaussianBlur);
             // 
             // backgroundWorker1
             // 
@@ -146,6 +186,75 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1650, 700);
             this.panel1.TabIndex = 1;
+            // 
+            // embossLaplacianToolStripMenuItem
+            // 
+            this.embossLaplacianToolStripMenuItem.Name = "embossLaplacianToolStripMenuItem";
+            this.embossLaplacianToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.embossLaplacianToolStripMenuItem.Text = "Sharpen";
+            this.embossLaplacianToolStripMenuItem.Click += new System.EventHandler(this.Sharpen);
+            // 
+            // meanRemovalToolStripMenuItem
+            // 
+            this.meanRemovalToolStripMenuItem.Name = "meanRemovalToolStripMenuItem";
+            this.meanRemovalToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.meanRemovalToolStripMenuItem.Text = "Mean Removal";
+            this.meanRemovalToolStripMenuItem.Click += new System.EventHandler(this.MeanRemoval);
+            // 
+            // embossToolStripMenuItem
+            // 
+            this.embossToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.laplascianToolStripMenuItem,
+            this.horizontalVerticalToolStripMenuItem,
+            this.allDirectionsToolStripMenuItem,
+            this.lossyToolStripMenuItem,
+            this.horizontalToolStripMenuItem,
+            this.verticalToolStripMenuItem});
+            this.embossToolStripMenuItem.Name = "embossToolStripMenuItem";
+            this.embossToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.embossToolStripMenuItem.Text = "Emboss";
+            // 
+            // laplascianToolStripMenuItem
+            // 
+            this.laplascianToolStripMenuItem.Name = "laplascianToolStripMenuItem";
+            this.laplascianToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.laplascianToolStripMenuItem.Text = "Laplascian";
+            this.laplascianToolStripMenuItem.Click += new System.EventHandler(this.EmbossLaplascian);
+            // 
+            // horizontalVerticalToolStripMenuItem
+            // 
+            this.horizontalVerticalToolStripMenuItem.Name = "horizontalVerticalToolStripMenuItem";
+            this.horizontalVerticalToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.horizontalVerticalToolStripMenuItem.Text = "Horizontal/Vertical";
+            this.horizontalVerticalToolStripMenuItem.Click += new System.EventHandler(this.EmbossHorizVert);
+            // 
+            // allDirectionsToolStripMenuItem
+            // 
+            this.allDirectionsToolStripMenuItem.Name = "allDirectionsToolStripMenuItem";
+            this.allDirectionsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.allDirectionsToolStripMenuItem.Text = "All Directions";
+            this.allDirectionsToolStripMenuItem.Click += new System.EventHandler(this.EmbossAllDirections);
+            // 
+            // lossyToolStripMenuItem
+            // 
+            this.lossyToolStripMenuItem.Name = "lossyToolStripMenuItem";
+            this.lossyToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.lossyToolStripMenuItem.Text = "Lossy";
+            this.lossyToolStripMenuItem.Click += new System.EventHandler(this.EmbossLossy);
+            // 
+            // horizontalToolStripMenuItem
+            // 
+            this.horizontalToolStripMenuItem.Name = "horizontalToolStripMenuItem";
+            this.horizontalToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.horizontalToolStripMenuItem.Text = "Horizontal";
+            this.horizontalToolStripMenuItem.Click += new System.EventHandler(this.EmbossHorizontal);
+            // 
+            // verticalToolStripMenuItem
+            // 
+            this.verticalToolStripMenuItem.Name = "verticalToolStripMenuItem";
+            this.verticalToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.verticalToolStripMenuItem.Text = "Vertical";
+            this.verticalToolStripMenuItem.Click += new System.EventHandler(this.EmbossVertical);
             // 
             // Form1
             // 
@@ -178,6 +287,18 @@
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.ToolStripMenuItem subtractionToolStripMenuItem;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ToolStripMenuItem convolutionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem smoothToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gaussianBlurToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem embossLaplacianToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem meanRemovalToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem embossToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem laplascianToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem horizontalVerticalToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem allDirectionsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem lossyToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem horizontalToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem verticalToolStripMenuItem;
     }
 }
 
